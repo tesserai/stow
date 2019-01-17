@@ -78,9 +78,13 @@ func (c *container) Put(name string, r io.Reader, size int64, metadata map[strin
 		id:        name,
 		container: c,
 		client:    c.client,
-		size:      size,
 		metadata:  mdParsed,
 	}
+
+	if size >= 0 {
+		item.size = size
+	}
+
 	return item, nil
 }
 

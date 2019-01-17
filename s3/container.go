@@ -121,10 +121,15 @@ func (c *container) Put(name string, r io.Reader, size int64, metadata map[strin
 		return nil, errors.Wrap(err, "unable to create or update item, preparing metadata")
 	}
 
+	var contentLength *int64
+	if size >= 0 {
+		contentLength = aws.Int64(size)
+	}
+
 	params := &s3.PutObjectInput{
 		Bucket:        aws.String(c.name), // Required
 		Key:           aws.String(name),   // Required
-		ContentLength: aws.Int64(size),
+		ContentLength: contentLength,
 		Body:          bytes.NewReader(content),
 		Metadata:      mdPrepped, // map[string]*string
 	}
@@ -147,7 +152,7 @@ func (c *container) Put(name string, r io.Reader, size int64, metadata map[strin
 		properties: properties{
 			ETag: &etag,
 			Key:  &name,
-			Size: &size,
+			Size: contentLength,
 			//LastModified *time.Time
 			//Owner        *s3.Owner
 			//StorageClass *string

@@ -165,7 +165,7 @@ func (c *Container) Put(name string, r io.Reader, size int64, metadata map[strin
 		name:         name,
 		container:    c,
 		client:       c.client,
-		size:         size,
+		size:         int64(res.Size),
 		etag:         res.Etag,
 		hash:         res.Md5Hash,
 		lastModified: t,
