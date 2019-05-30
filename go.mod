@@ -3,7 +3,7 @@ module github.com/graymeta/stow
 require (
 	cloud.google.com/go v0.11.0
 	github.com/Azure/azure-sdk-for-go v10.2.1-beta+incompatible
-	github.com/Azure/go-autorest v8.3.1+incompatible
+	github.com/Azure/go-autorest v10.6.2+incompatible
 	github.com/aws/aws-sdk-go v1.10.27
 	github.com/cheekybits/is v0.0.0-20150225183255-68e9c0620927
 	github.com/dgrijalva/jwt-go v3.0.0+incompatible

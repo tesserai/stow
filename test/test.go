@@ -302,11 +302,11 @@ func createContainer(is is.I, location stow.Location, name string) stow.Containe
 
 func putItem(is is.I, container stow.Container, name, content string, md map[string]interface{}) (stow.Item, bool) {
 	var skipAssertion bool // skip metadata assertion
-	item, err := container.Put(name, strings.NewReader(content), int64(len(content)), md)
+	item, err := container.Put(name, strings.NewReader(content), md)
 
 	// Metadata retrieval isn't supported
 	if stow.IsNotSupported(err) {
-		item, err = container.Put(name, strings.NewReader(content), int64(len(content)), nil)
+		item, err = container.Put(name, strings.NewReader(content), nil)
 		skipAssertion = true
 	}
 

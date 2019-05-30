@@ -4,6 +4,7 @@ github.com/Azure/azure-sdk-for-go v10.2.1-beta+incompatible h1:/x4W7ZQV4PHJYnLUg
 github.com/Azure/azure-sdk-for-go v10.2.1-beta+incompatible/go.mod h1:9XXNKU+eRnpl9moKnB4QOLf1HestfXbmab5FXxiDBjc=
 github.com/Azure/go-autorest v8.3.1+incompatible h1:1+jMCOJcCh3GmI7FGJVOo8AlfPWDyjS7fLbbkZGzEGY=
 github.com/Azure/go-autorest v8.3.1+incompatible/go.mod h1:r+4oMnoxhatjLLJ6zxSWATqVooLgysK6ZNox3g/xq24=
+github.com/Azure/go-autorest v10.6.2+incompatible/go.mod h1:r+4oMnoxhatjLLJ6zxSWATqVooLgysK6ZNox3g/xq24=
 github.com/aws/aws-sdk-go v1.10.27 h1:PqHiH4W8Na+o936LZeNF35h+G6RnEYMWRuleY9SnbDQ=
 github.com/aws/aws-sdk-go v1.10.27/go.mod h1:ZRmQr0FajVIyZ4ZzBYKG5P3ZqPz9IHG41ZoMu1ADI3k=
 github.com/cheekybits/is v0.0.0-20150225183255-68e9c0620927 h1:SKI1/fuSdodxmNNyVBR8d7X/HuLnRpvvFO0AgyQk764=
